@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:voley_app/components/court.dart';
+import 'package:voley_app/components/game_time.dart';
 import 'package:voley_app/components/secondary_button.dart';
 import 'package:voley_app/components/side_column.dart';
 import 'package:voley_app/components/times_secondary.dart';
+import 'package:voley_app/screens/modal_screen.dart';
+import 'package:voley_app/screens/third_screen.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -13,6 +16,14 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
+
+  bool _visibleLeft = false;
+  bool _visibleRight = false;
+  int _scoreLeft = 0;
+  int _scoreRigth = 0;
+  final String timeA = 'Ziraldos';
+  final String timeB = 'Autoconvidados';
+
   @override
   void initState() {
     super.initState();
@@ -27,6 +38,27 @@ class _SecondScreenState extends State<SecondScreen> {
     SystemChrome.setPreferredOrientations(DeviceOrientation.values);
     super.dispose();
   }
+
+  void novoSet() {
+    setState(() {
+      _scoreLeft = 0;
+      _scoreRigth = 0;
+      _visibleLeft = false;
+      _visibleRight = false;
+    });
+  }
+
+  bool verificaVitoria(String vencedor) {
+    if (_scoreLeft >= 25 && (_scoreLeft - _scoreRigth) >= 2) {
+      ModalScreen(vencedor: vencedor, newSet: novoSet,).mostrarDialogo(context);
+      return true;
+    } else if (_scoreRigth >= 25 && (_scoreRigth - _scoreLeft) >= 2) {
+      ModalScreen(vencedor: vencedor, newSet: novoSet,).mostrarDialogo(context);
+      return true;
+    }
+    return false;
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -55,11 +87,18 @@ class _SecondScreenState extends State<SecondScreen> {
             ),
           ],
         ),
-        body: const Row(
+        body: Row(
           children: [
             Flexible(
               flex: 1,
-              child: SideColumn(isLeft: true),
+              child: SideColumn(isLeft: true, onPressed: () {
+                setState(() {
+                  _scoreLeft++;
+                  _visibleRight = false;
+                  _visibleLeft = true;
+                  verificaVitoria(timeA);
+                });
+              }),
             ),
             Flexible(
               flex: 2,
@@ -68,28 +107,44 @@ class _SecondScreenState extends State<SecondScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      TimesSecondary(aOrB: 'A', timeName: 'Ziraldos'),
-                      TimesSecondary(aOrB: 'B', timeName: 'Autoconvidados'),
+                      TimesSecondary(aOrB: 'A', timeName: timeA),
+                      TimesSecondary(aOrB: 'B', timeName: timeB),
                     ],
                   ),
-                  Court(),
-                  SizedBox(height: 10),
-                  Text(
-                    'Tempo de jogo: 1:14´00´´',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontFamily: 'ConcertOne',
-                    ),
+                  Court(
+                    visibilidadeDireita: _visibleRight,
+                    visibilidadeEsquerda: _visibleLeft,
+                    scoreLeft: _scoreLeft.toString(),
+                    scoreRight: _scoreRigth.toString(),
                   ),
-                  SizedBox(height: 10),
-                  SecondaryButton(),
+                  const SizedBox(height: 10),
+                  const GameTime(),
+                  const SizedBox(height: 10),
+                  SecondaryButton(
+                    fontColor: Colors.white,
+                    nameButton: 'Placar Geral',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const ThirdScreen())
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
             Flexible(
               flex: 1,
-              child: SideColumn(isLeft: false),
+              child: SideColumn(isLeft: false, 
+                onPressed: () {
+                  setState(() {
+                    _scoreRigth++;
+                    _visibleLeft = false;
+                    _visibleRight = true;
+                    verificaVitoria(timeB);
+                  });
+                }
+              ),
             ),
           ],
         ),
