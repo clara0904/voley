@@ -1,14 +1,16 @@
 ﻿import 'package:flutter/material.dart';
-import 'package:voley_app/components/circle_button.dart';
+
 
 class List extends StatelessWidget {
   final String tipoLance;
   final bool left;
+  final Widget button;
 
   const List({
     super.key,
     required this.tipoLance,
     required this.left,
+    required this.button,
   });
 
   @override
@@ -19,7 +21,7 @@ class List extends StatelessWidget {
         mainAxisAlignment: left ? MainAxisAlignment.start : MainAxisAlignment.end,
         children: [
           if (left) ...[
-            const CircleButton(),
+            button,
             const SizedBox(width: 15), 
           ],
           Text(
@@ -32,7 +34,7 @@ class List extends StatelessWidget {
             ),
             if (!left) ...[
             const SizedBox(width: 15), 
-            const CircleButton(),
+            button,
           ],
         ],
       ),
