@@ -1,13 +1,16 @@
 ﻿import 'package:flutter/material.dart';
 
 class CircleButton extends StatelessWidget {
-  const CircleButton({super.key});
+  final Function onPressed;
+  const CircleButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       heroTag: null,
-      onPressed: () {},
+      onPressed: () {
+        onPressed();
+      },
       backgroundColor: const Color(0xff2B4A8E),
       shape: const CircleBorder(),
       mini: true,
