@@ -1,13 +1,16 @@
 ﻿import 'package:flutter/material.dart';
 
 class SecondaryButton extends StatelessWidget {
-  const SecondaryButton({super.key});
+  final String nameButton;
+  final Color fontColor;
+  final Function onPressed;
+  const SecondaryButton({super.key, required this.nameButton, required this.fontColor, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        // Ação ao clicar
+        onPressed();
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color(0xff2B4A8E),
@@ -21,11 +24,11 @@ class SecondaryButton extends StatelessWidget {
               
         ),
       ),
-      child: const Text(
-        'Placar Geral',
+      child: Text(
+        nameButton,
         style: TextStyle(
           fontSize: 30,
-          color: Colors.white,
+          color: fontColor,
           fontFamily: 'ConcertOne',
         ),
       ),
