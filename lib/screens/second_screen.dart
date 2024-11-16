@@ -70,7 +70,7 @@ class _SecondScreenState extends State<SecondScreen> {
           elevation: 0, 
           toolbarHeight: 40,
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.white), 
+            icon: const Icon(Icons.arrow_back, color: Colors.white, size: 25.0), 
             onPressed: () {
               Navigator.pop(context); 
             },
@@ -79,7 +79,7 @@ class _SecondScreenState extends State<SecondScreen> {
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
-                icon: const Icon(Icons.settings, color: Colors.white), 
+                icon: const Icon(Icons.settings, color: Colors.white, size: 25.0), 
                 onPressed: () {
                   
                 },
