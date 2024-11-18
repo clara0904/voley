@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:voley_app/components/court.dart';
-import 'package:voley_app/components/game_time.dart';
-import 'package:voley_app/components/secondary_button.dart';
-import 'package:voley_app/components/side_column.dart';
-import 'package:voley_app/components/times_secondary.dart';
+import 'package:voley_app/components/components_second/court.dart';
+import 'package:voley_app/components/components_second/game_time.dart';
+import 'package:voley_app/components/components_second/secondary_button.dart';
+import 'package:voley_app/components/components_second/side_column.dart';
+import 'package:voley_app/components/components_second/times_secondary.dart';
 import 'package:voley_app/screens/modal_screen.dart';
 import 'package:voley_app/screens/third_screen.dart';
 

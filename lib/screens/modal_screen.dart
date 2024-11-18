@@ -1,5 +1,5 @@
 ﻿import 'package:flutter/material.dart';
-import 'package:voley_app/components/secondary_button.dart';
+import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/screens/third_screen.dart';
 
 class ModalScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
 ﻿import 'package:flutter/material.dart';
-import 'package:voley_app/components/times_primary.dart';
+import 'package:voley_app/components/components_primary/times_primary.dart';
 class TimesList extends StatelessWidget {
   const TimesList({super.key});
 

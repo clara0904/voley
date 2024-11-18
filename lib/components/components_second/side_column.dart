@@ -1,5 +1,5 @@
 ﻿import 'package:flutter/material.dart';
-import 'package:voley_app/components/circle_button.dart';
+import 'package:voley_app/components/components_second/circle_button.dart';
 import 'list.dart';
 
 class SideColumn extends StatelessWidget {

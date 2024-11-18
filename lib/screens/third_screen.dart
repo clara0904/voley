@@ -1,7 +1,6 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:voley_app/components/components_third/results_table.dart';
-import 'package:voley_app/components/components_third/time_line.dart';
 import 'package:voley_app/components/components_third/victories.dart';
 
 class ThirdScreen extends StatelessWidget {
