@@ -40,7 +40,6 @@ class CustomButton extends StatelessWidget {
         style: TextStyle(
           fontSize: textSize,
           color: Colors.white,
-          fontFamily: 'ConcertOne',
         ),
       ),
     );

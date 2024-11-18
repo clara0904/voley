@@ -27,7 +27,6 @@ class List extends StatelessWidget {
           Text(
               tipoLance,
               style: const TextStyle(
-                fontFamily: 'ConcertOne',
                 fontSize: 35,
                 color: Colors.white,
               ),

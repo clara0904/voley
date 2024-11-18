@@ -51,7 +51,7 @@ class PrimaryScreen extends StatelessWidget {
           shape: const CircleBorder(),
           child: const Text(
             '+',
-            style: TextStyle(color: Colors.white, fontSize: 45, fontFamily: 'ConcertOne'),
+            style: TextStyle(color: Colors.white, fontSize: 45),
           ),
         ),
       ),

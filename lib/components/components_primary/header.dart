@@ -20,16 +20,20 @@ class Header extends StatelessWidget {
                 'Volley',
                 style: TextStyle(
                   fontFamily: 'ConcertOne',
-                  fontSize: 45,
+                  fontSize: 60,
                   color: Colors.white,
                 ),
               ),
-              Text(
-                'do fim de semana',
-                style: TextStyle(
-                  fontFamily: 'ConcertOne',
-                  fontSize: 15,
-                  color: Colors.white,
+              Padding(
+                padding: EdgeInsets.only(right:8.0),
+                child: Text(
+                  'do fim de semana',
+                  style: TextStyle(
+                    fontFamily: 'ConcertOne',
+                    fontSize: 15,
+                    color: Colors.white,
+                    height: 0.1,
+                  ),
                 ),
               ),
             ],

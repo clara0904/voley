@@ -33,7 +33,6 @@ class ModalScreen extends StatelessWidget {
                   "FIM DE SET",
                   style: TextStyle(
                     fontSize: 40,
-                    fontFamily: 'ConcertOne',
                     color: Color(0xff2B4A8E),
                   ),
                   textAlign: TextAlign.center,
@@ -45,7 +44,6 @@ class ModalScreen extends StatelessWidget {
                       vencedor,
                       style: const TextStyle(
                         fontSize: 60,
-                        fontFamily: 'ConcertOne',
                         color: Color(0xff2B4A8E),
                       ),
                     textAlign: TextAlign.center,
@@ -56,7 +54,6 @@ class ModalScreen extends StatelessWidget {
                         "VENCEU",
                         style: TextStyle(
                           fontSize: 30,
-                          fontFamily: 'ConcertOne',
                           color: Color(0xff2B4A8E),
                         ),
                         textAlign: TextAlign.right, 

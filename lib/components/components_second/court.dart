@@ -44,7 +44,6 @@ class Court extends StatelessWidget {
                   Text(
                     scoreLeft,
                     style: const TextStyle(
-                      fontFamily: 'ConcertOne',
                       fontSize: 70,
                       color: Colors.white,
                     ),
@@ -67,7 +66,6 @@ class Court extends StatelessWidget {
                   Text(
                     scoreRight,
                     style: const TextStyle(
-                      fontFamily: 'ConcertOne',
                       fontSize: 70,
                       color: Colors.white,
                     ),

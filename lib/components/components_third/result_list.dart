@@ -22,44 +22,40 @@ class ResultList extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: invertOrder
-              ? [
-                  Text(
-                    victories,
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: winner ? const Color(0xff2B4A8E) : Colors.yellow,
-                      fontFamily: 'ConcertOne',
-                    ),
+            ? [
+                Text(
+                  victories,
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: winner ? const Color(0xff2B4A8E) : Colors.yellow,
                   ),
-                  const SizedBox(width: 10), 
-                  Text(
-                    timeName,
-                    style: const TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontFamily: 'ConcertOne',
-                    ),
+                ),
+                const SizedBox(width: 10), 
+                Text(
+                  timeName,
+                  style: const TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
                   ),
-                ]
-              : [
-                  Text(
-                    timeName,
-                    style: const TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontFamily: 'ConcertOne',
-                    ),
+                ),
+              ]
+            : [
+                Text(
+                  timeName,
+                  style: const TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
                   ),
-                  const SizedBox(width: 10), 
-                  Text(
-                    victories,
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: winner ? const Color(0xff2B4A8E) : Colors.yellow,
-                      fontFamily: 'ConcertOne',
-                    ),
+                ),
+                const SizedBox(width: 10), 
+                Text(
+                  victories,
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: winner ? const Color(0xff2B4A8E) : Colors.yellow,
                   ),
-                ],
+                ),
+              ],
         ),
       ),
     );

@@ -25,7 +25,6 @@ class ThirdScreen extends StatelessWidget {
               style: TextStyle(
                 color:  Color(0xff2B4A8E),
                 fontSize: 40,
-                fontFamily: 'ConcertOne'
               ),
           ),
           leading: IconButton(

@@ -21,7 +21,6 @@ class TimesList extends StatelessWidget {
               child: const Text(
                 'TIMES',
                 style: TextStyle(
-                  fontFamily: 'ConcertOne',
                   fontSize: 60,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

@@ -29,7 +29,6 @@ class SecondaryButton extends StatelessWidget {
         style: TextStyle(
           fontSize: 30,
           color: fontColor,
-          fontFamily: 'ConcertOne',
         ),
       ),
     );

@@ -19,7 +19,6 @@ class TimesSecondary extends StatelessWidget {
               color: Color(0xff2B4A8E),
               fontSize: 20, 
               fontWeight: FontWeight.bold,
-              fontFamily: 'ConcertOne',
             ),
           ),
           ),
@@ -27,7 +26,6 @@ class TimesSecondary extends StatelessWidget {
               timeName,
               style: const TextStyle(
                 fontSize: 25, 
-                fontFamily: 'ConcertOne',
                 color: Color(0xff2B4A8E), 
               ),
             ),

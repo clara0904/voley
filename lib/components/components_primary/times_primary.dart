@@ -19,7 +19,6 @@ class TimesPrimary extends StatelessWidget {
           Text(
             time,
             style: TextStyle(
-              fontFamily: 'ConcertOne',
               fontSize: 40,
               color: Colors.yellow[500],
             ),
@@ -28,7 +27,6 @@ class TimesPrimary extends StatelessWidget {
           Text(
             sizetime,
             style: const TextStyle(
-              fontFamily: 'ConcertOne',
               fontSize: 60,
               color: Color(0xff2B4A8E),
               fontWeight: FontWeight.bold,
@@ -38,8 +36,7 @@ class TimesPrimary extends StatelessWidget {
             quarterTurns: 3,
             child: Text(
               'Jogadores',
-              style: TextStyle(
-                fontFamily: 'ConcertOne',
+              style: TextStyle(                
                 fontSize: 10,
                 color: Color(0xff2B4A8E),
                 fontWeight: FontWeight.bold,
