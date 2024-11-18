@@ -8,6 +8,14 @@ class ModalScreen extends StatelessWidget {
 
   const ModalScreen({super.key, required this.vencedor, required this.newSet});
 
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => mostrarDialogo(context),
+      child: const Text('Mostrar Modal'),
+    );
+  }
+
   Future<void> mostrarDialogo(BuildContext context) async {
     return showDialog(
       context: context,
@@ -91,14 +99,6 @@ class ModalScreen extends StatelessWidget {
           ),
         );
       },
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () => mostrarDialogo(context),
-      child: const Text('Mostrar Modal'),
     );
   }
 }
