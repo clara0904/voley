@@ -20,7 +20,6 @@ class PrimaryScreen extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const SizedBox(height: 30),
             const Header(),
             const SizedBox(height: 100),
             const TimesList(),
@@ -36,7 +35,7 @@ class PrimaryScreen extends StatelessWidget {
                 Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => SecondScreen())
+                  builder: (_) => const SecondScreen())
                 );
               }
             ),
