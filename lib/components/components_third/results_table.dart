@@ -6,16 +6,12 @@ class ResultsTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: SizedBox(
-        width: double.infinity, 
-        child: Row(
+    return Row(
           mainAxisAlignment: MainAxisAlignment.center, 
           children: [
             Container(
               height: 220,
-              width: 250,
+              width: 200,
               decoration: BoxDecoration(
                 color: const Color(0xffF77859),
                 border: Border.all(color: Colors.white, width: 3),
@@ -23,15 +19,15 @@ class ResultsTable extends StatelessWidget {
               child: const Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(6.0),
                     child: CircleAvatar(
-                      radius: 25,
+                      radius: 22,
                       backgroundColor: Color(0xffC2F2F8),
                       child: Text(
                         'A',
                         style: TextStyle(
                           color: Color(0xff2B4A8E),
-                          fontSize: 25, 
+                          fontSize: 22, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -40,13 +36,13 @@ class ResultsTable extends StatelessWidget {
                   ResultList(timeName: 'Ziraldos', victories: '25', invertOrder: false, winner: true,),
                   ResultList(timeName: 'Ziraldos', victories: '15', invertOrder: false, winner: false,),
                   ResultList(timeName: 'Ziraldos', victories: '22', invertOrder: false, winner: false,),
-                  ResultList(timeName: 'Sparrings', victories: '25', invertOrder: false, winner: true,),
+                  ResultList(timeName: 'Ziraldos', victories: '25', invertOrder: false, winner: true,),
                 ],
               ),
             ),
             Container(
               height: 220,
-              width: 250,
+              width: 200,
               decoration: BoxDecoration(
                 color: const Color(0xffF77859),
                 border: Border.all(color: Colors.white, width: 3),
@@ -54,30 +50,28 @@ class ResultsTable extends StatelessWidget {
               child: const Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(6.0),
                     child: CircleAvatar(
-                      radius: 25,
+                      radius: 22,
                       backgroundColor: Color(0xffC2F2F8),
                       child: Text(
                         'B',
                         style: TextStyle(
                           color: Color(0xff2B4A8E),
-                          fontSize: 25, 
+                          fontSize: 22, 
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ),
-                  ResultList(timeName: 'Sparrings', victories: '10', invertOrder: true, winner: false,),
-                  ResultList(timeName: 'Sicranos', victories: '25', invertOrder: true, winner: true,),
-                  ResultList(timeName: 'Autoconvidados', victories: '25', invertOrder: true, winner: true,),
-                  ResultList(timeName: 'Autoconvidados', victories: '20', invertOrder: true, winner: false,),
+                  ResultList(timeName: 'Felizes', victories: '10', invertOrder: true, winner: false,),
+                  ResultList(timeName: 'Felizes', victories: '25', invertOrder: true, winner: true,),
+                  ResultList(timeName: 'Felizes', victories: '25', invertOrder: true, winner: true,),
+                  ResultList(timeName: 'Felizes', victories: '20', invertOrder: true, winner: false,),
                 ],
               ),
             ),
           ],
-        ),
-      ),
     );
   }
 }

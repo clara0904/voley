@@ -1,22 +1,32 @@
 ﻿import 'package:flutter/material.dart';
 
 class GameTime extends StatelessWidget {
-  const GameTime({super.key});
+  final bool visible;
+  const GameTime({super.key, required this.visible});
 
   @override
   Widget build(BuildContext context) {
     return RichText(
-      text: const TextSpan(
+      text: TextSpan(
         children: [
-          TextSpan(
-            text: "Tempo de jogo: 1:14'",
+          if (visible)
+          const TextSpan(
+            text: "Tempo de jogo: ",
             style: TextStyle(
               fontSize: 20,
               color: Colors.white,
               fontFamily: 'ConcertOne',
             ),
           ),
-          TextSpan(
+          const TextSpan(
+            text: "1:14'",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+              fontFamily: 'ConcertOne',
+            ),
+          ),
+          const TextSpan(
             text: "00''",
             style: TextStyle(
               fontSize: 15, 

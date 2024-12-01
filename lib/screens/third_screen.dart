@@ -1,5 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:voley_app/components/components_second/game_time.dart';
+import 'package:voley_app/components/components_third/accessories.dart';
 import 'package:voley_app/components/components_third/results_table.dart';
 import 'package:voley_app/components/components_third/victories.dart';
 
@@ -45,16 +47,35 @@ class ThirdScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: const Stack(
-        children: [
-          ResultsTable(),
-            Align(
-              alignment: Alignment.bottomCenter,
+        body: const Column(
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: Accessories(
+                      accessorie: Icon(Icons.stacked_bar_chart),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 3,
+                    child: ResultsTable(),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Accessories(
+                      accessorie: GameTime(visible: false,)
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox( 
               child: Victories(),
             ),
-        ],
-      ),
-
+          ],
+        ),
       )
     );
   }

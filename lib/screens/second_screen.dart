@@ -118,7 +118,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     scoreRight: _scoreRigth.toString(),
                   ),
                   const SizedBox(height: 10),
-                  const GameTime(),
+                  const GameTime(visible: true,),
                   const SizedBox(height: 10),
                   SecondaryButton(
                     fontColor: Colors.white,
