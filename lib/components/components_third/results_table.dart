@@ -1,5 +1,5 @@
 ﻿import 'package:flutter/material.dart';
-import 'package:voley_app/components/components_second/times_secondary.dart';
+import 'package:voley_app/components/times.dart';
 import 'package:voley_app/components/components_third/result_list.dart';
 
 class ResultsTable extends StatelessWidget {

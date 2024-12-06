@@ -4,7 +4,7 @@ import 'package:voley_app/components/components_second/court.dart';
 import 'package:voley_app/components/components_second/game_time.dart';
 import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/components/components_second/side_column.dart';
-import 'package:voley_app/components/components_second/times_secondary.dart';
+import 'package:voley_app/components/times.dart';
 import 'package:voley_app/screens/modal_screen.dart';
 import 'package:voley_app/screens/third_screen.dart';
 
@@ -80,9 +80,7 @@ class _SecondScreenState extends State<SecondScreen> {
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
                 icon: const Icon(Icons.settings, color: Colors.white, size: 25.0), 
-                onPressed: () {
-                  
-                },
+                onPressed: () {},
               ),
             ),
           ],
@@ -105,10 +103,10 @@ class _SecondScreenState extends State<SecondScreen> {
               child: Column(
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      TimesSecondary(aOrB: 'A', timeName: timeA),
-                      TimesSecondary(aOrB: 'B', timeName: timeB),
+                      TimesSecondary(aOrB: 'A', timeName: timeA, visible: true,),
+                      TimesSecondary(aOrB: 'B', timeName: timeB, visible: true,),
                     ],
                   ),
                   Court(

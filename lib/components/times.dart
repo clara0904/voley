@@ -3,7 +3,8 @@
 class TimesSecondary extends StatelessWidget {
   final String aOrB;
   final String timeName;
-  const TimesSecondary({super.key, required this.aOrB, required this.timeName});
+  final bool visible;
+  const TimesSecondary({super.key, required this.aOrB, required this.timeName, required this.visible});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +23,14 @@ class TimesSecondary extends StatelessWidget {
             ),
           ),
           ),
-            Text(
-              timeName,
-              style: const TextStyle(
-                fontSize: 25, 
-                color: Color(0xff2B4A8E), 
+            Visibility(
+              visible: visible,
+              child: Text(
+                timeName,
+                style: const TextStyle(
+                  fontSize: 25, 
+                  color: Color(0xff2B4A8E), 
+                ),
               ),
             ),
         ],
