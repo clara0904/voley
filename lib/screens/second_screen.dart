@@ -49,10 +49,10 @@ class _SecondScreenState extends State<SecondScreen> {
   }
 
   bool verificaVitoria(String vencedor) {
-    if (_scoreLeft >= 25 && (_scoreLeft - _scoreRigth) >= 2) {
+    if (_scoreLeft >= 2 && (_scoreLeft - _scoreRigth) >= 2) {
       ModalScreen(vencedor: vencedor, newSet: novoSet,).mostrarDialogo(context);
       return true;
-    } else if (_scoreRigth >= 25 && (_scoreRigth - _scoreLeft) >= 2) {
+    } else if (_scoreRigth >= 2 && (_scoreRigth - _scoreLeft) >= 2) {
       ModalScreen(vencedor: vencedor, newSet: novoSet,).mostrarDialogo(context);
       return true;
     }
@@ -98,6 +98,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 });
               }),
             ),
+            
             Flexible(
               flex: 2,
               child: Column(
@@ -105,8 +106,14 @@ class _SecondScreenState extends State<SecondScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      TimesSecondary(aOrB: 'A', timeName: timeA, visible: true,),
-                      TimesSecondary(aOrB: 'B', timeName: timeB, visible: true,),
+                      Expanded(
+                        flex: 1,
+                        child: Times(aOrB: 'A', timeName: timeA, visible: true,),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Times(aOrB: 'B', timeName: timeB, visible: true,),
+                      ),
                     ],
                   ),
                   Court(
@@ -116,7 +123,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     scoreRight: _scoreRigth.toString(),
                   ),
                   const SizedBox(height: 10),
-                  const GameTime(visible: true,),
+                  const GameTime(visible: true),
                   const SizedBox(height: 10),
                   SecondaryButton(
                     fontColor: Colors.white,
@@ -124,13 +131,14 @@ class _SecondScreenState extends State<SecondScreen> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (_) => const ThirdScreen())
+                        MaterialPageRoute(builder: (_) => const ThirdScreen()),
                       );
                     },
                   ),
                 ],
               ),
             ),
+
             Flexible(
               flex: 1,
               child: SideColumn(isLeft: false, 

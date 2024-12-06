@@ -21,7 +21,7 @@ class ResultsTable extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(6.0),
-                    child: TimesSecondary(aOrB: 'A', timeName: '', visible: false)
+                    child: Times(aOrB: 'A', timeName: '', visible: false)
                   ),
                   ResultList(timeName: 'Felizes', victories: '25', invertOrder: false, winner: true,),
                   ResultList(timeName: 'Autoconvidados', victories: '15', invertOrder: false, winner: false,),
@@ -41,7 +41,7 @@ class ResultsTable extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(6.0),
-                    child: TimesSecondary(aOrB: 'B', timeName: '', visible: false)
+                    child: Times(aOrB: 'B', timeName: '', visible: false)
                   ),
                   ResultList(timeName: 'Autoconvidados', victories: '10', invertOrder: true, winner: false,),
                   ResultList(timeName: 'Felizes', victories: '25', invertOrder: true, winner: true,),
