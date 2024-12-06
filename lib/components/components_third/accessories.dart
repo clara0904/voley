@@ -31,7 +31,7 @@ class AccessorieWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Center(
           child: IconTheme.merge(
-            data: const IconThemeData(color: Colors.white, size: 25),
+            data: const IconThemeData(color: Colors.white, size: 24),
             child: accessorie,
           ),
         ),

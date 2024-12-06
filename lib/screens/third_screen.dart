@@ -39,7 +39,7 @@ class ThirdScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
-                icon: const Icon(Icons.analytics_outlined, color: Colors.white, size: 25.0,), 
+                icon: const Icon(Icons.show_chart_sharp, color: Colors.white, size: 25.0,), 
                 onPressed: () {
                   
                 },
@@ -55,7 +55,7 @@ class ThirdScreen extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Accessories(
-                      accessorie: Icon(Icons.stacked_bar_chart),
+                      accessorie: Icon(Icons.bar_chart_sharp),
                     ),
                   ),
                   Flexible(
