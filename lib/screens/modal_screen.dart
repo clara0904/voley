@@ -38,62 +38,72 @@ class ModalScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "FIM DE SET",
-                  style: TextStyle(
-                    fontSize: 40,
-                    color: ColorsApp.fonteSecundaria,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 20),
-                Column(
-                  children: [
-                    Text(
-                      vencedor,
-                      style: TextStyle(
-                        fontSize: 60,
-                        color: ColorsApp.fonteSecundaria,
-                      ),
-                    textAlign: TextAlign.center,
+                Flexible(
+                  flex: 1,
+                  child: Text(
+                    "FIM DE SET",
+                    style: TextStyle(
+                      fontSize: 40,
+                      color: ColorsApp.fonteSecundaria,
                     ),
-                    Align(
-                      alignment: Alignment.bottomRight, 
-                      child: Text(
-                        "VENCEU",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                
+                Flexible(
+                  flex: 2,
+                  child: Column(
+                    children: [
+                      Text(
+                        vencedor,
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 68,
                           color: ColorsApp.fonteSecundaria,
                         ),
-                        textAlign: TextAlign.right, 
+                      textAlign: TextAlign.center,
                       ),
-                    ),
-                  ],
+                      Align(
+                        alignment: Alignment.centerRight, 
+                        child: Text(
+                          "VENCEU",
+                          style: TextStyle(
+                            fontSize: 34,
+                            color: ColorsApp.fonteSecundaria,
+                          ), 
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SecondaryButton(
-                      onPressed: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => const ThirdScreen())
-                        );
-                      },
-                      nameButton: 'Terminar',
-                      fontColor: ColorsApp.fontePrimaria,
-                    ),
-                    SecondaryButton(
-                      onPressed: () {
-                        newSet();
-                        Navigator.of(context).pop();
-                      },
-                      nameButton: 'Novo Set',
-                      fontColor: ColorsApp.fonteTerciaria,
-                    ),
-                  ],
+
+                Flexible(
+                  flex: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                  
+                      SecondaryButton(
+                        onPressed: () {
+                          Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const ThirdScreen())
+                          );
+                        },
+                        nameButton: 'Terminar',
+                        fontColor: ColorsApp.fontePrimaria,
+                      ),
+                  
+                      SecondaryButton(
+                        onPressed: () {
+                          newSet();
+                          Navigator.of(context).pop();
+                        },
+                        nameButton: 'Novo Set',
+                        fontColor: ColorsApp.fonteTerciaria,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
