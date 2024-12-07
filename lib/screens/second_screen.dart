@@ -5,6 +5,7 @@ import 'package:voley_app/components/components_second/game_time.dart';
 import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/components/components_second/side_column.dart';
 import 'package:voley_app/components/times.dart';
+import 'package:voley_app/models/verifica_vitoria.dart';
 import 'package:voley_app/screens/modal_screen.dart';
 import 'package:voley_app/screens/third_screen.dart';
 
@@ -21,8 +22,8 @@ class _SecondScreenState extends State<SecondScreen> {
   bool _visibleRight = false;
   int _scoreLeft = 0;
   int _scoreRigth = 0;
-  final String timeA = 'Ziraldos';
-  final String timeB = 'Autoconvidados';
+  final String timeA = 'Felizes';
+  final String timeB = 'Esquecidos';
 
   @override
   void initState() {
@@ -47,18 +48,6 @@ class _SecondScreenState extends State<SecondScreen> {
       _visibleRight = false;
     });
   }
-
-  bool verificaVitoria(String vencedor) {
-    if (_scoreLeft >= 2 && (_scoreLeft - _scoreRigth) >= 2) {
-      ModalScreen(vencedor: vencedor, newSet: novoSet,).mostrarDialogo(context);
-      return true;
-    } else if (_scoreRigth >= 2 && (_scoreRigth - _scoreLeft) >= 2) {
-      ModalScreen(vencedor: vencedor, newSet: novoSet,).mostrarDialogo(context);
-      return true;
-    }
-    return false;
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +83,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   _scoreLeft++;
                   _visibleRight = false;
                   _visibleLeft = true;
-                  verificaVitoria(timeA);
+                  Vitoria().verificaVitoria(timeA, _scoreLeft, _scoreRigth, novoSet, context);
                 });
               }),
             ),
@@ -147,7 +136,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     _scoreRigth++;
                     _visibleLeft = false;
                     _visibleRight = true;
-                    verificaVitoria(timeB);
+                    Vitoria().verificaVitoria(timeB, _scoreLeft, _scoreRigth, novoSet, context);
                   });
                 }
               ),
