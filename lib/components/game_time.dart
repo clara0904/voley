@@ -3,7 +3,9 @@ import 'package:voley_app/theme/colors.dart';
 
 class GameTime extends StatelessWidget {
   final bool visible;
-  const GameTime({super.key, required this.visible});
+  final String minutosJogo;
+  final String segundosJogo;
+  const GameTime({super.key, required this.visible, required this.minutosJogo, required this.segundosJogo});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class GameTime extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: "1:14'",
+            text: minutosJogo,
             style: TextStyle(
               fontSize: 20,
               color: ColorsApp.fontePrimaria,
@@ -28,7 +30,7 @@ class GameTime extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: "00''",
+            text: segundosJogo,
             style: TextStyle(
               fontSize: 15, 
               color: ColorsApp.fontePrimaria,

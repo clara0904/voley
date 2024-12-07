@@ -67,7 +67,7 @@ class ThirdScreen extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Accessories(
-                      accessorie: GameTime(visible: false,)
+                      accessorie: GameTime(visible: false, minutosJogo: "0:38'", segundosJogo: "24''",)
                     ),
                   ),
                 ],

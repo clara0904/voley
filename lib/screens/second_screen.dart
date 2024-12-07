@@ -6,7 +6,6 @@ import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/components/components_second/side_column.dart';
 import 'package:voley_app/components/times.dart';
 import 'package:voley_app/models/verifica_vitoria.dart';
-import 'package:voley_app/screens/modal_screen.dart';
 import 'package:voley_app/screens/third_screen.dart';
 import 'package:voley_app/theme/colors.dart';
 
@@ -114,7 +113,7 @@ class _SecondScreenState extends State<SecondScreen> {
 
                   const SizedBox(height: 10),
 
-                  const GameTime(visible: true),
+                  const GameTime(visible: true, minutosJogo: "1:30'", segundosJogo: "00''",),
 
                   const SizedBox(height: 10),
 
