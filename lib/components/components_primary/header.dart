@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+
 class Header extends StatelessWidget {
   const Header({super.key});
 
@@ -9,14 +10,14 @@ class Header extends StatelessWidget {
         padding: EdgeInsets.all(10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
             CircleAvatar(
-              radius: 25,
+              radius: 24,
               backgroundImage: AssetImage('imagens/ball.png'),
             ),
             SizedBox(width: 12),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Stack(
               children: [
                 Text(
                   'Volley',
@@ -25,14 +26,15 @@ class Header extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(right:8.0),
+                Positioned(
+                  bottom: 6,
+                  left: 5,
                   child: Text(
                     'do fim de semana',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 14,
                       color: Colors.white,
-                      height: 0.1,
+                      height: 0.1, 
                     ),
                   ),
                 ),

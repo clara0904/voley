@@ -18,14 +18,15 @@ class PrimaryScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: const Color(0xff00ADC3),
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Header(),
-            const SizedBox(height: 100),
             const TimesList(),
-            const SizedBox(height: 35),
-            CustomButton( nameButton: 'Jogo Casado', backgroundColor: const Color(0xff00ADC3), textSize: 30, onPressed: (){},),
-            const SizedBox(height: 20),
+            CustomButton( 
+              nameButton: 'Jogo Casado', 
+              backgroundColor: const Color(0xff00ADC3), 
+              textSize: 30, 
+              onPressed: (){},
+            ),
             CustomButton( 
               nameButton: 'Iniciar', 
               backgroundColor: const Color(0xff2B4A8E), 
@@ -48,10 +49,11 @@ class PrimaryScreen extends StatelessWidget {
           },
           backgroundColor: const Color(0xff2B4A8E),
           shape: const CircleBorder(),
-          child: const Text(
-            '+',
-            style: TextStyle(color: Colors.white, fontSize: 45),
-          ),
+          child: const Icon(
+            Icons.add,
+            size: 24,
+            color: Colors.white
+          )
         ),
       ),
     );
