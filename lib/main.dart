@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:voley_app/screens/primary_screen.dart';
-import 'package:voley_app/screens/second_screen.dart';
-import 'package:voley_app/screens/third_screen.dart';
 import 'package:voley_app/theme/colors.dart';
 
 void main() {
