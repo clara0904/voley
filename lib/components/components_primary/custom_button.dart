@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 class CustomButton extends StatelessWidget {
   final String nameButton;
   final Color backgroundColor;
@@ -30,8 +31,8 @@ class CustomButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
             side: comBorder
-                ? const BorderSide(
-                    color: Colors.white,
+                ? BorderSide(
+                    color: ColorsApp.fontePrimaria,
                     width: 2,
                   )
                 : BorderSide.none,
@@ -41,7 +42,7 @@ class CustomButton extends StatelessWidget {
           nameButton,
           style: TextStyle(
             fontSize: textSize,
-            color: Colors.white,
+            color: ColorsApp.fontePrimaria,
           ),
         ),
       ),

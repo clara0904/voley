@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class TimeLine extends StatelessWidget {
   final String nomeTime;
@@ -15,17 +16,17 @@ class TimeLine extends StatelessWidget {
             children: [
               TextSpan(
                 text: '$nomeTime: ',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 30,
-                  color: Colors.white,
+                  color: ColorsApp.fontePrimaria,
                   fontFamily: 'ConcertOne',
                 ),
               ),
               TextSpan(
                 text: victories,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 30, 
-                  color: Color(0xff2B4A8E),
+                  color: ColorsApp.fonteSecundaria,
                   fontFamily: 'ConcertOne',
                 ),
               ),

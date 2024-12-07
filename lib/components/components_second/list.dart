@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 
 class List extends StatelessWidget {
@@ -26,9 +27,9 @@ class List extends StatelessWidget {
           ],
           Text(
               tipoLance,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 35,
-                color: Colors.white,
+                color: ColorsApp.fontePrimaria,
               ),
             ),
             if (!left) ...[

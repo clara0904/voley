@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class Court extends StatelessWidget {
   final bool visibilidadeDireita;
@@ -22,8 +23,8 @@ class Court extends StatelessWidget {
           child: Container(
             height: 150,
             decoration: BoxDecoration(
-              color: const Color(0xffF77859), 
-              border: Border.all(color: Colors.white, width: 3),
+              color: ColorsApp.quadras, 
+              border: Border.all(color: ColorsApp.fontePrimaria, width: 3),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -37,9 +38,9 @@ class Court extends StatelessWidget {
                 ),
                 Text(
                   scoreLeft,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 70,
-                    color: Colors.white,
+                    color: ColorsApp.fontePrimaria,
                   ),
                 ),
               ],
@@ -50,8 +51,8 @@ class Court extends StatelessWidget {
           child: Container(
             height: 150,
             decoration: BoxDecoration(
-              color: const Color(0xffF77859), 
-              border: Border.all(color: Colors.white, width: 3),
+              color: ColorsApp.quadras,
+              border: Border.all(color: ColorsApp.fontePrimaria, width: 3),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -65,9 +66,9 @@ class Court extends StatelessWidget {
                 ),
                 Text(
                   scoreRight,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 70,
-                    color: Colors.white,
+                    color: ColorsApp.fontePrimaria,
                   ),
                 ),
               ],

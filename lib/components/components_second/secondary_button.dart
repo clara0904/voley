@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class SecondaryButton extends StatelessWidget {
   final String nameButton;
@@ -13,12 +14,12 @@ class SecondaryButton extends StatelessWidget {
         onPressed();
       },
       style: ElevatedButton.styleFrom(
-        backgroundColor: const Color(0xff2B4A8E),
+        backgroundColor: ColorsApp.fonteSecundaria,
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
-          side: const BorderSide(
-            color: Colors.white,
+          side: BorderSide(
+            color: ColorsApp.fontePrimaria,
             width: 2,
           )
               

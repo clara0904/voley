@@ -1,5 +1,6 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:voley_app/components/components_third/time_line.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class Victories extends StatelessWidget {
   const Victories({super.key});
@@ -12,15 +13,15 @@ class Victories extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 10.0),
         child: Container(
           height: 55,
-          decoration: const BoxDecoration(
-          color: Color.fromARGB(158, 191, 234, 239),
+          decoration: BoxDecoration(
+          color: ColorsApp.transparente,
           border: Border(
             top: BorderSide(
-              color: Colors.white, 
+              color: ColorsApp.fontePrimaria, 
               width: 2.0, 
             ),
             bottom: BorderSide(
-              color: Colors.white, 
+              color: ColorsApp.fontePrimaria,
               width: 2.0, 
             ),
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:voley_app/screens/primary_screen.dart';
 import 'package:voley_app/screens/second_screen.dart';
 import 'package:voley_app/screens/third_screen.dart';
+import 'package:voley_app/theme/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'ConcertOne',
+        scaffoldBackgroundColor: ColorsApp.background,
+        appBarTheme: AppBarTheme(
+          backgroundColor: ColorsApp.background,
+        ),
       ),
       home: const PrimaryScreen(),
     );

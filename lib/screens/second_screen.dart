@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:voley_app/components/components_second/court.dart';
-import 'package:voley_app/components/components_second/game_time.dart';
+import 'package:voley_app/components/game_time.dart';
 import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/components/components_second/side_column.dart';
 import 'package:voley_app/components/times.dart';
 import 'package:voley_app/models/verifica_vitoria.dart';
 import 'package:voley_app/screens/modal_screen.dart';
 import 'package:voley_app/screens/third_screen.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -28,7 +29,7 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsFlutterBinding.ensureInitialized();
+
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeLeft,
     ]);
@@ -53,13 +54,11 @@ class _SecondScreenState extends State<SecondScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xff00ADC3),
         appBar: AppBar(
-          backgroundColor: const Color(0xff00ADC3), 
           elevation: 0, 
           toolbarHeight: 40,
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.white, size: 25.0), 
+            icon: Icon(Icons.arrow_back, color: ColorsApp.fontePrimaria, size: 25.0), 
             onPressed: () {
               Navigator.pop(context); 
             },
@@ -68,7 +67,7 @@ class _SecondScreenState extends State<SecondScreen> {
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
-                icon: const Icon(Icons.settings, color: Colors.white, size: 25.0), 
+                icon: Icon(Icons.settings, color: ColorsApp.fontePrimaria, size: 25.0), 
                 onPressed: () {},
               ),
             ),
@@ -105,17 +104,22 @@ class _SecondScreenState extends State<SecondScreen> {
                       ),
                     ],
                   ),
+
                   Court(
                     visibilidadeDireita: _visibleRight,
                     visibilidadeEsquerda: _visibleLeft,
                     scoreLeft: _scoreLeft.toString(),
                     scoreRight: _scoreRigth.toString(),
                   ),
+
                   const SizedBox(height: 10),
+
                   const GameTime(visible: true),
+
                   const SizedBox(height: 10),
+
                   SecondaryButton(
-                    fontColor: Colors.white,
+                    fontColor: ColorsApp.fontePrimaria,
                     nameButton: 'Placar Geral',
                     onPressed: () {
                       Navigator.push(

@@ -1,6 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/screens/third_screen.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class ModalScreen extends StatelessWidget {
   final String vencedor;
@@ -22,11 +23,11 @@ class ModalScreen extends StatelessWidget {
       barrierDismissible: false,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: const Color.fromARGB(182, 191, 234, 239),
+          backgroundColor: ColorsApp.transparente,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
-            side: const BorderSide(
-              color: Colors.white,
+            side: BorderSide(
+              color: ColorsApp.fontePrimaria,
               width: 2,
             ),
           ),
@@ -37,11 +38,11 @@ class ModalScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   "FIM DE SET",
                   style: TextStyle(
                     fontSize: 40,
-                    color: Color(0xff2B4A8E),
+                    color: ColorsApp.fonteSecundaria,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -50,19 +51,19 @@ class ModalScreen extends StatelessWidget {
                   children: [
                     Text(
                       vencedor,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 60,
-                        color: Color(0xff2B4A8E),
+                        color: ColorsApp.fonteSecundaria,
                       ),
                     textAlign: TextAlign.center,
                     ),
-                    const Align(
+                    Align(
                       alignment: Alignment.bottomRight, 
                       child: Text(
                         "VENCEU",
                         style: TextStyle(
                           fontSize: 30,
-                          color: Color(0xff2B4A8E),
+                          color: ColorsApp.fonteSecundaria,
                         ),
                         textAlign: TextAlign.right, 
                       ),
@@ -82,7 +83,7 @@ class ModalScreen extends StatelessWidget {
                         );
                       },
                       nameButton: 'Terminar',
-                      fontColor: Colors.white,
+                      fontColor: ColorsApp.fontePrimaria,
                     ),
                     SecondaryButton(
                       onPressed: () {
@@ -90,7 +91,7 @@ class ModalScreen extends StatelessWidget {
                         Navigator.of(context).pop();
                       },
                       nameButton: 'Novo Set',
-                      fontColor: Colors.orange,
+                      fontColor: ColorsApp.fonteTerciaria,
                     ),
                   ],
                 ),

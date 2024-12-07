@@ -1,5 +1,6 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:voley_app/components/components_primary/times_primary.dart';
+import 'package:voley_app/theme/colors.dart';
 class TimesList extends StatelessWidget {
   const TimesList({super.key});
 
@@ -16,15 +17,15 @@ class TimesList extends StatelessWidget {
               quarterTurns: 3,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.5),
-                  border: Border.all(color: Colors.white, width: 2),
+                  color: ColorsApp.transparente,
+                  border: Border.all(color: ColorsApp.fontePrimaria, width: 2),
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 65),
-                child: const Text(
+                child: Text(
                   'TIMES',
                   style: TextStyle(
                     fontSize: 60,
-                    color: Colors.white,
+                    color: ColorsApp.fontePrimaria,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

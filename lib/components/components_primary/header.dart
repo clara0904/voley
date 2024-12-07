@@ -1,29 +1,30 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center, 
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 24,
               backgroundImage: AssetImage('imagens/ball.png'),
             ),
-            SizedBox(width: 12),
+            const SizedBox(width: 12),
             Stack(
               children: [
                 Text(
                   'Volley',
                   style: TextStyle(
                     fontSize: 60,
-                    color: Colors.white,
+                    color: ColorsApp.fontePrimaria,
                   ),
                 ),
                 Positioned(
@@ -33,7 +34,7 @@ class Header extends StatelessWidget {
                     'do fim de semana',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.white,
+                      color: ColorsApp.fontePrimaria,
                       height: 0.1, 
                     ),
                   ),

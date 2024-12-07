@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class GameTime extends StatelessWidget {
   final bool visible;
@@ -10,27 +11,27 @@ class GameTime extends StatelessWidget {
       text: TextSpan(
         children: [
           if (visible)
-          const TextSpan(
+          TextSpan(
             text: "Tempo de jogo: ",
             style: TextStyle(
               fontSize: 20,
-              color: Colors.white,
+              color: ColorsApp.fontePrimaria,
               fontFamily: 'ConcertOne',
             ),
           ),
-          const TextSpan(
+          TextSpan(
             text: "1:14'",
             style: TextStyle(
               fontSize: 20,
-              color: Colors.white,
+              color: ColorsApp.fontePrimaria,
               fontFamily: 'ConcertOne',
             ),
           ),
-          const TextSpan(
+          TextSpan(
             text: "00''",
             style: TextStyle(
               fontSize: 15, 
-              color: Colors.white,
+              color: ColorsApp.fontePrimaria,
               fontFamily: 'ConcertOne',
             ),
           ),

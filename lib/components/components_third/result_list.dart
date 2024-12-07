@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class ResultList extends StatelessWidget {
   final String timeName;
@@ -21,7 +22,7 @@ class ResultList extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 24,
-                      color: winner ? const Color(0xff2B4A8E) : Colors.yellow,
+                      color: winner ? ColorsApp.fonteSecundaria : ColorsApp.fonteTerciaria,
                     ),
                   ),
                 ),
@@ -31,9 +32,9 @@ class ResultList extends StatelessWidget {
                   child: Text(
                     timeName,
                     textAlign: TextAlign.left,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 24,
-                      color: Colors.white,
+                      color: ColorsApp.fontePrimaria,
                     ),
                   ),
                 ),
@@ -44,9 +45,9 @@ class ResultList extends StatelessWidget {
                   child: Text(
                     timeName,
                     textAlign: TextAlign.right,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 24,
-                      color: Colors.white,
+                      color: ColorsApp.fontePrimaria,
                     ),
                   ),
                 ),
@@ -57,7 +58,7 @@ class ResultList extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 24,
-                      color: winner ? const Color(0xff2B4A8E) : Colors.yellow,
+                      color: winner ? ColorsApp.fonteSecundaria : ColorsApp.fonteTerciaria,
                     ),
                   ),
                 ),

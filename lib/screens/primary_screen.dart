@@ -4,6 +4,7 @@ import 'package:voley_app/components/components_primary/custom_button.dart';
 import 'package:voley_app/components/components_primary/header.dart';
 import 'package:voley_app/components/components_primary/times_list.dart';
 import 'package:voley_app/screens/second_screen.dart';
+import 'package:voley_app/theme/colors.dart';
 
 
 class PrimaryScreen extends StatelessWidget {
@@ -11,25 +12,29 @@ class PrimaryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
+
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xff00ADC3),
         body: Column(
           children: [
             const Header(),
+
             const TimesList(),
+
             CustomButton( 
               nameButton: 'Jogo Casado', 
-              backgroundColor: const Color(0xff00ADC3), 
+              backgroundColor: ColorsApp.background, 
               textSize: 30, 
               onPressed: (){},
             ),
+
             CustomButton( 
               nameButton: 'Iniciar', 
-              backgroundColor: const Color(0xff2B4A8E), 
+              backgroundColor: ColorsApp.fonteSecundaria, 
               textSize: 40, 
               comBorder: true,
               onPressed: () { 
@@ -42,17 +47,18 @@ class PrimaryScreen extends StatelessWidget {
             ),
           ],
         ),
+        
         floatingActionButton: FloatingActionButton(
           heroTag: null,
           onPressed: () {
             // Ação ao clicar
           },
-          backgroundColor: const Color(0xff2B4A8E),
+          backgroundColor: ColorsApp.fonteSecundaria,
           shape: const CircleBorder(),
-          child: const Icon(
+          child: Icon(
             Icons.add,
             size: 24,
-            color: Colors.white
+            color: ColorsApp.fontePrimaria
           )
         ),
       ),

@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 class TimesPrimary extends StatelessWidget {
   final String time;
   final String sizetime;
@@ -20,25 +21,25 @@ class TimesPrimary extends StatelessWidget {
             time,
             style: TextStyle(
               fontSize: 40,
-              color: Colors.yellow[500],
+              color: ColorsApp.fonteTerciaria,
             ),
           ),
           const SizedBox(width: 15),
           Text(
             sizetime,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 60,
-              color: Color(0xff2B4A8E),
+              color: ColorsApp.fonteSecundaria,
               fontWeight: FontWeight.bold,
             ),
           ),
-          const RotatedBox(
+          RotatedBox(
             quarterTurns: 3,
             child: Text(
               'Jogadores',
               style: TextStyle(                
                 fontSize: 10,
-                color: Color(0xff2B4A8E),
+                color: ColorsApp.fonteSecundaria,
                 fontWeight: FontWeight.bold,
               ),
             ),

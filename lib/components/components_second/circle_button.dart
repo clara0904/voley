@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class CircleButton extends StatelessWidget {
   final Function onPressed;
@@ -11,12 +12,12 @@ class CircleButton extends StatelessWidget {
       onPressed: () {
         onPressed();
       },
-      backgroundColor: const Color(0xff2B4A8E),
+      backgroundColor: ColorsApp.fonteSecundaria,
       shape: const CircleBorder(),
       mini: true,
-      child: const Icon(
+      child: Icon(
         Icons.add,
-        color: Colors.white, size: 23,
+        color: ColorsApp.fontePrimaria, size: 23,
       ),
     );
   }

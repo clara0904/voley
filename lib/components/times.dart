@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class Times extends StatelessWidget {
   final String aOrB;
@@ -12,11 +13,11 @@ class Times extends StatelessWidget {
       children: [
         CircleAvatar(
         radius: 20,
-        backgroundColor: const Color(0xffC2F2F8),
+        backgroundColor: ColorsApp.backgroundSecundario,
         child: Text(
           aOrB,
-          style: const TextStyle(
-            color: Color(0xff2B4A8E),
+          style: TextStyle(
+            color: ColorsApp.fonteSecundaria,
             fontSize: 20, 
             fontWeight: FontWeight.bold,
           ),
@@ -26,9 +27,9 @@ class Times extends StatelessWidget {
             visible: visible,
             child: Text(
               timeName,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 25, 
-                color: Color(0xff2B4A8E), 
+                color: ColorsApp.fonteSecundaria,
               ),
             ),
           ),

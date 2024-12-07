@@ -1,6 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:voley_app/components/times.dart';
 import 'package:voley_app/components/components_third/result_list.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class ResultsTable extends StatelessWidget {
   const ResultsTable({super.key});
@@ -14,8 +15,8 @@ class ResultsTable extends StatelessWidget {
               height: 220,
               width: 210,
               decoration: BoxDecoration(
-                color: const Color(0xffF77859),
-                border: Border.all(color: Colors.white, width: 3),
+                color: ColorsApp.quadras,
+                border: Border.all(color: ColorsApp.fontePrimaria, width: 3),
               ),
               child: const Column(
                 children: [
@@ -34,8 +35,8 @@ class ResultsTable extends StatelessWidget {
               height: 220,
               width: 210,
               decoration: BoxDecoration(
-                color: const Color(0xffF77859),
-                border: Border.all(color: Colors.white, width: 3),
+                color: ColorsApp.quadras,
+                border: Border.all(color: ColorsApp.fontePrimaria, width: 3),
               ),
               child: const Column(
                 children: [

@@ -1,4 +1,5 @@
 ﻿import 'package:flutter/material.dart';
+import 'package:voley_app/theme/colors.dart';
 
 class Accessories extends StatelessWidget {
   final Widget accessorie;
@@ -31,7 +32,7 @@ class AccessorieWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Center(
           child: IconTheme.merge(
-            data: const IconThemeData(color: Colors.white, size: 24),
+            data: IconThemeData(color: ColorsApp.fontePrimaria, size: 24),
             child: accessorie,
           ),
         ),
