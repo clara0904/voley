@@ -23,6 +23,7 @@ class ResultList extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       color: winner ? ColorsApp.fonteSecundaria : ColorsApp.fonteTerciaria,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
@@ -59,6 +60,7 @@ class ResultList extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       color: winner ? ColorsApp.fonteSecundaria : ColorsApp.fonteTerciaria,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),

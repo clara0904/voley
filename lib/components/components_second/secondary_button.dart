@@ -28,7 +28,7 @@ class SecondaryButton extends StatelessWidget {
       child: Text(
         nameButton,
         style: TextStyle(
-          fontSize: 30,
+          fontSize: 32,
           color: fontColor,
         ),
       ),
