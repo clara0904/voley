@@ -27,7 +27,7 @@ class PrimaryScreen extends StatelessWidget {
 
             CustomButton( 
               nameButton: 'Jogo Casado', 
-              corBackground: ColorsApp.background, 
+              corBackground: ColorsApp.backgroundPrincipal, 
               tamText: 30, 
               onPressed: (){},
             ),

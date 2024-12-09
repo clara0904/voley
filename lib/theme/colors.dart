@@ -1,7 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 
 class ColorsApp {
-  static Color background = const Color(0xff00ADC3);
+  static Color backgroundPrincipal = const Color(0xff00ADC3);
   static Color fontePrimaria = const Color.fromARGB(188, 245, 245, 245);
   static Color fonteSecundaria = const Color(0xff2B4A8E);
   static Color fonteTerciaria = const Color.fromARGB(255, 255, 226, 6);

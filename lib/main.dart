@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'ConcertOne',
-        scaffoldBackgroundColor: ColorsApp.background,
+        scaffoldBackgroundColor: ColorsApp.backgroundPrincipal,
         appBarTheme: AppBarTheme(
-          backgroundColor: ColorsApp.background,
+          backgroundColor: ColorsApp.backgroundPrincipal,
         ),
       ),
       home: const PrimaryScreen(),
