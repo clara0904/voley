@@ -90,8 +90,8 @@ class ModalScreen extends StatelessWidget {
                             builder: (_) => const ThirdScreen())
                           );
                         },
-                        nameButton: 'Terminar',
-                        fontColor: ColorsApp.fontePrimaria,
+                        nomeBotao: 'Terminar',
+                        corFonte: ColorsApp.fontePrimaria,
                       ),
                   
                       SecondaryButton(
@@ -99,8 +99,8 @@ class ModalScreen extends StatelessWidget {
                           newSet();
                           Navigator.of(context).pop();
                         },
-                        nameButton: 'Novo Set',
-                        fontColor: ColorsApp.fonteTerciaria,
+                        nomeBotao: 'Novo Set',
+                        corFonte: ColorsApp.fonteTerciaria,
                       ),
                     ],
                   ),

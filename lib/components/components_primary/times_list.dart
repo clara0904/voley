@@ -35,10 +35,10 @@ class TimesList extends StatelessWidget {
           const Expanded(
             child: Column(
               children: [
-                TimesPrimary(time: 'Atrasados', sizetime: '5'),
-                TimesPrimary(time: 'Penetras', sizetime: '3'),
-                TimesPrimary(time: 'Felizes', sizetime: '4'),
-                TimesPrimary(time: 'Esquecidos', sizetime: '5'),
+                TimesPrimary(nomeTime: 'Atrasados', jogadores: '5'),
+                TimesPrimary(nomeTime: 'Penetras', jogadores: '3'),
+                TimesPrimary(nomeTime: 'Felizes', jogadores: '4'),
+                TimesPrimary(nomeTime: 'Esquecidos', jogadores: '5'),
               ],
             ),
           ),

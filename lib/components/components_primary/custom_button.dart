@@ -2,16 +2,16 @@
 import 'package:voley_app/theme/colors.dart';
 class CustomButton extends StatelessWidget {
   final String nameButton;
-  final Color backgroundColor;
-  final double textSize;
+  final Color corBackground;
+  final double tamText;
   final bool comBorder;
   final void Function() onPressed;
 
   const CustomButton({
     super.key,
     required this.nameButton,
-    required this.backgroundColor,
-    required this.textSize,
+    required this.corBackground,
+    required this.tamText,
     required this.onPressed,
     this.comBorder = false,
   });
@@ -25,23 +25,23 @@ class CustomButton extends StatelessWidget {
           onPressed();
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
+          backgroundColor: corBackground,
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
           minimumSize: const Size(250, 60),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
             side: comBorder
-                ? BorderSide(
-                    color: ColorsApp.fontePrimaria,
-                    width: 2,
-                  )
-                : BorderSide.none,
+              ? BorderSide(
+                  color: ColorsApp.fontePrimaria,
+                  width: 2,
+                )
+              : BorderSide.none,
           ),
         ),
         child: Text(
           nameButton,
           style: TextStyle(
-            fontSize: textSize,
+            fontSize: tamText,
             color: ColorsApp.fontePrimaria,
           ),
         ),

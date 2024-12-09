@@ -28,14 +28,13 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: 6,
-                  left: 5,
+                  bottom: 3,
+                  left: 6,
                   child: Text(
                     'do fim de semana',
                     style: TextStyle(
                       fontSize: 14,
                       color: ColorsApp.fontePrimaria,
-                      height: 0.1, 
                     ),
                   ),
                 ),

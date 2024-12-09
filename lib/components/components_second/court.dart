@@ -4,14 +4,14 @@ import 'package:voley_app/theme/colors.dart';
 class Court extends StatelessWidget {
   final bool visibilidadeDireita;
   final bool visibilidadeEsquerda;
-  final String scoreLeft;
-  final String scoreRight;
+  final String pontosEsquerda;
+  final String pontosDireita;
   const Court ({
     super.key, 
     required this.visibilidadeDireita, 
     required this.visibilidadeEsquerda, 
-    required this.scoreLeft,
-    required this.scoreRight
+    required this.pontosEsquerda,
+    required this.pontosDireita
   });
 
   @override
@@ -37,7 +37,7 @@ class Court extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  scoreLeft,
+                  pontosEsquerda,
                   style: TextStyle(
                     fontSize: 70,
                     color: ColorsApp.fontePrimaria,
@@ -65,7 +65,7 @@ class Court extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  scoreRight,
+                  pontosDireita,
                   style: TextStyle(
                     fontSize: 70,
                     color: ColorsApp.fontePrimaria,

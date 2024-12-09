@@ -4,14 +4,14 @@ import 'package:voley_app/theme/colors.dart';
 
 class List extends StatelessWidget {
   final String tipoLance;
-  final bool left;
-  final Widget button;
+  final bool esquerda;
+  final Widget botao;
 
   const List({
     super.key,
     required this.tipoLance,
-    required this.left,
-    required this.button,
+    required this.esquerda,
+    required this.botao,
   });
 
   @override
@@ -19,10 +19,10 @@ class List extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15, right: 3, left: 3),
       child: Row(
-        mainAxisAlignment: left ? MainAxisAlignment.start : MainAxisAlignment.end,
+        mainAxisAlignment: esquerda ? MainAxisAlignment.start : MainAxisAlignment.end,
         children: [
-          if (left) ...[
-            button,
+          if (esquerda) ...[
+            botao,
             const SizedBox(width: 15), 
           ],
           Text(
@@ -32,9 +32,9 @@ class List extends StatelessWidget {
                 color: ColorsApp.fontePrimaria,
               ),
             ),
-            if (!left) ...[
+            if (!esquerda) ...[
             const SizedBox(width: 15), 
-            button,
+            botao,
           ],
         ],
       ),

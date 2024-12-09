@@ -29,10 +29,10 @@ class Victories extends StatelessWidget {
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TimeLine(nomeTime: 'Atrasados',victories: '3',),
-              TimeLine(nomeTime: 'Esquecidos',victories: '1',),
-              TimeLine(nomeTime: 'Penetras',victories: '5',),
-              TimeLine(nomeTime: 'Felizes',victories: '7',),
+              TimeLine(nomeTime: 'Atrasados',vitorias: '3',),
+              TimeLine(nomeTime: 'Esquecidos',vitorias: '1',),
+              TimeLine(nomeTime: 'Penetras',vitorias: '5',),
+              TimeLine(nomeTime: 'Felizes',vitorias: '7',),
             ],
           )
         ),

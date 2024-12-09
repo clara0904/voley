@@ -1,13 +1,13 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:voley_app/theme/colors.dart';
 class TimesPrimary extends StatelessWidget {
-  final String time;
-  final String sizetime;
+  final String nomeTime;
+  final String jogadores;
 
   const TimesPrimary({
     super.key,
-    required this.time,
-    required this.sizetime,
+    required this.nomeTime,
+    required this.jogadores,
   });
 
   @override
@@ -18,7 +18,7 @@ class TimesPrimary extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(
-            time,
+            nomeTime,
             style: TextStyle(
               fontSize: 40,
               color: ColorsApp.fonteTerciaria,
@@ -26,7 +26,7 @@ class TimesPrimary extends StatelessWidget {
           ),
           const SizedBox(width: 15),
           Text(
-            sizetime,
+            jogadores,
             style: TextStyle(
               fontSize: 60,
               color: ColorsApp.fonteSecundaria,

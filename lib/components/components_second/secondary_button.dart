@@ -2,10 +2,10 @@
 import 'package:voley_app/theme/colors.dart';
 
 class SecondaryButton extends StatelessWidget {
-  final String nameButton;
-  final Color fontColor;
+  final String nomeBotao;
+  final Color corFonte;
   final Function onPressed;
-  const SecondaryButton({super.key, required this.nameButton, required this.fontColor, required this.onPressed});
+  const SecondaryButton({super.key, required this.nomeBotao, required this.corFonte, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +26,10 @@ class SecondaryButton extends StatelessWidget {
         ),
       ),
       child: Text(
-        nameButton,
+        nomeBotao,
         style: TextStyle(
           fontSize: 32,
-          color: fontColor,
+          color: corFonte,
         ),
       ),
     );

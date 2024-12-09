@@ -3,8 +3,8 @@ import 'package:voley_app/theme/colors.dart';
 
 class TimeLine extends StatelessWidget {
   final String nomeTime;
-  final String victories;
-  const TimeLine({super.key, required this.nomeTime, required this.victories});
+  final String vitorias;
+  const TimeLine({super.key, required this.nomeTime, required this.vitorias});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class TimeLine extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                text: victories,
+                text: vitorias,
                 style: TextStyle(
                   fontSize: 30, 
                   color: ColorsApp.fonteSecundaria,

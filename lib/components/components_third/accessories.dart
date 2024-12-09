@@ -2,8 +2,8 @@
 import 'package:voley_app/theme/colors.dart';
 
 class Accessories extends StatelessWidget {
-  final Widget accessorie;
-  const Accessories({super.key, required this.accessorie});
+  final Widget accessorio;
+  const Accessories({super.key, required this.accessorio});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,10 @@ class Accessories extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AccessorieWidget(accessorie: accessorie),
-          AccessorieWidget(accessorie: accessorie),
-          AccessorieWidget(accessorie: accessorie),
-          AccessorieWidget(accessorie: accessorie),
+          AccessorieWidget(accessorie: accessorio),
+          AccessorieWidget(accessorie: accessorio),
+          AccessorieWidget(accessorie: accessorio),
+          AccessorieWidget(accessorie: accessorio),
         ],
       ),
     );

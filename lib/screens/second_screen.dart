@@ -76,13 +76,15 @@ class _SecondScreenState extends State<SecondScreen> {
           children: [
             Flexible(
               flex: 1,
-              child: SideColumn(isLeft: true, onPressed: () {
-                setState(() {
-                  _scoreLeft++;
-                  _visibleRight = false;
-                  _visibleLeft = true;
-                  Vitoria().verificaVitoria(timeA, _scoreLeft, _scoreRigth, novoSet, context);
-                });
+              child: SideColumn(
+                eEsquerda: true, 
+                onPressed: () {
+                  setState(() {
+                    _scoreLeft++;
+                    _visibleRight = false;
+                    _visibleLeft = true;
+                    Vitoria().verificaVitoria(timeA, _scoreLeft, _scoreRigth, novoSet, context);
+                  });
               }),
             ),
             
@@ -95,11 +97,11 @@ class _SecondScreenState extends State<SecondScreen> {
                     children: [
                       Expanded(
                         flex: 1,
-                        child: Times(aOrB: 'A', timeName: timeA, visible: true,),
+                        child: Times(timeAB: 'A', nomeTime: timeA, visible: true,),
                       ),
                       Expanded(
                         flex: 1,
-                        child: Times(aOrB: 'B', timeName: timeB, visible: true,),
+                        child: Times(timeAB: 'B', nomeTime: timeB, visible: true,),
                       ),
                     ],
                   ),
@@ -107,8 +109,8 @@ class _SecondScreenState extends State<SecondScreen> {
                   Court(
                     visibilidadeDireita: _visibleRight,
                     visibilidadeEsquerda: _visibleLeft,
-                    scoreLeft: _scoreLeft.toString(),
-                    scoreRight: _scoreRigth.toString(),
+                    pontosEsquerda: _scoreLeft.toString(),
+                    pontosDireita: _scoreRigth.toString(),
                   ),
 
                   const SizedBox(height: 10),
@@ -118,8 +120,8 @@ class _SecondScreenState extends State<SecondScreen> {
                   const SizedBox(height: 10),
 
                   SecondaryButton(
-                    fontColor: ColorsApp.fontePrimaria,
-                    nameButton: 'Placar Geral',
+                    corFonte: ColorsApp.fontePrimaria,
+                    nomeBotao: 'Placar Geral',
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -133,7 +135,8 @@ class _SecondScreenState extends State<SecondScreen> {
 
             Flexible(
               flex: 1,
-              child: SideColumn(isLeft: false, 
+              child: SideColumn(
+                eEsquerda: false, 
                 onPressed: () {
                   setState(() {
                     _scoreRigth++;

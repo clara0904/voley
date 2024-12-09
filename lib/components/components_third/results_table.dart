@@ -22,12 +22,12 @@ class ResultsTable extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(6.0),
-                    child: Times(aOrB: 'A', timeName: '', visible: false)
+                    child: Times(timeAB: 'A', nomeTime: '', visible: false)
                   ),
-                  ResultList(timeName: 'Felizes', victories: '25', invertOrder: false, winner: true,),
-                  ResultList(timeName: 'Atrasados', victories: '15', invertOrder: false, winner: false,),
-                  ResultList(timeName: 'Penetras', victories: '22', invertOrder: false, winner: false,),
-                  ResultList(timeName: 'Esquecidos', victories: '25', invertOrder: false, winner: true,),
+                  ResultList(nomeTime: 'Felizes', pontuacao: '25', inverteOrdem: false, vencedor: true,),
+                  ResultList(nomeTime: 'Atrasados', pontuacao: '15', inverteOrdem: false, vencedor: false,),
+                  ResultList(nomeTime: 'Penetras', pontuacao: '22', inverteOrdem: false, vencedor: false,),
+                  ResultList(nomeTime: 'Esquecidos', pontuacao: '25', inverteOrdem: false, vencedor: true,),
                 ],
               ),
             ),
@@ -42,12 +42,12 @@ class ResultsTable extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(6.0),
-                    child: Times(aOrB: 'B', timeName: '', visible: false)
+                    child: Times(timeAB: 'B', nomeTime: '', visible: false)
                   ),
-                  ResultList(timeName: 'Esquecidos', victories: '10', invertOrder: true, winner: false,),
-                  ResultList(timeName: 'Penetras', victories: '25', invertOrder: true, winner: true,),
-                  ResultList(timeName: 'Felizes', victories: '25', invertOrder: true, winner: true,),
-                  ResultList(timeName: 'Atrasados', victories: '20', invertOrder: true, winner: false,),
+                  ResultList(nomeTime: 'Esquecidos', pontuacao: '10', inverteOrdem: true, vencedor: false,),
+                  ResultList(nomeTime: 'Penetras', pontuacao: '25', inverteOrdem: true, vencedor: true,),
+                  ResultList(nomeTime: 'Felizes', pontuacao: '25', inverteOrdem: true, vencedor: true,),
+                  ResultList(nomeTime: 'Atrasados', pontuacao: '20', inverteOrdem: true, vencedor: false,),
                 ],
               ),
             ),

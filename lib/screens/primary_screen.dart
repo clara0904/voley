@@ -27,15 +27,15 @@ class PrimaryScreen extends StatelessWidget {
 
             CustomButton( 
               nameButton: 'Jogo Casado', 
-              backgroundColor: ColorsApp.background, 
-              textSize: 30, 
+              corBackground: ColorsApp.background, 
+              tamText: 30, 
               onPressed: (){},
             ),
 
             CustomButton( 
               nameButton: 'Iniciar', 
-              backgroundColor: ColorsApp.fonteSecundaria, 
-              textSize: 40, 
+              corBackground: ColorsApp.fonteSecundaria, 
+              tamText: 40, 
               comBorder: true,
               onPressed: () { 
                 Navigator.push(
