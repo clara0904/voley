@@ -26,7 +26,7 @@ class TimesList extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 60,
                     color: ColorsApp.fontePrimaria,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),

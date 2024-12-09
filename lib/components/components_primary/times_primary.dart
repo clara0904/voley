@@ -20,7 +20,7 @@ class TimesPrimary extends StatelessWidget {
           Text(
             nomeTime,
             style: TextStyle(
-              fontSize: 40,
+              fontSize: 42,
               color: ColorsApp.fonteTerciaria,
             ),
           ),
@@ -28,7 +28,7 @@ class TimesPrimary extends StatelessWidget {
           Text(
             jogadores,
             style: TextStyle(
-              fontSize: 60,
+              fontSize: 64,
               color: ColorsApp.fonteSecundaria,
               fontWeight: FontWeight.bold,
             ),
