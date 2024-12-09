@@ -2,21 +2,18 @@
 import 'package:voley_app/theme/colors.dart';
 
 class Accessories extends StatelessWidget {
-  final Widget accessorio;
-  const Accessories({super.key, required this.accessorio});
+  final List<Widget> accessorios;
+  const Accessories({super.key, required this.accessorios});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 28.0), 
+      padding: const EdgeInsets.only(top: 28.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          AccessorieWidget(accessorie: accessorio),
-          AccessorieWidget(accessorie: accessorio),
-          AccessorieWidget(accessorie: accessorio),
-          AccessorieWidget(accessorie: accessorio),
-        ],
+        children: accessorios.map((accessorio) {
+          return AccessorieWidget(accessorie: accessorio);
+        }).toList(),
       ),
     );
   }

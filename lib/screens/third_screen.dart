@@ -26,7 +26,7 @@ class ThirdScreen extends StatelessWidget {
               'PLACAR GERAL',
               style: TextStyle(
                 color:  ColorsApp.fonteSecundaria,
-                fontSize: 40,
+                fontSize: 34,
               ),
           ),
           leading: IconButton(
@@ -55,7 +55,12 @@ class ThirdScreen extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Accessories(
-                      accessorio: Icon(Icons.bar_chart_sharp),
+                      accessorios: [
+                        Icon(Icons.bar_chart_sharp),
+                        Icon(Icons.bar_chart_sharp),
+                        Icon(Icons.bar_chart_sharp),
+                        Icon(Icons.bar_chart_sharp),
+                      ],
                     ),
                   ),
 
@@ -67,7 +72,12 @@ class ThirdScreen extends StatelessWidget {
                   Flexible(
                     flex: 1,
                     child: Accessories(
-                      accessorio: GameTime(visible: false, minutosJogo: "0:38'", segundosJogo: "24''",)
+                      accessorios: [
+                        GameTime(visible: false, minutosJogo: "0:38'", segundosJogo: "24''",),
+                        GameTime(visible: false, minutosJogo: "0:25'", segundosJogo: "48''",),
+                        GameTime(visible: false, minutosJogo: "0:32'", segundosJogo: "15''",),
+                        GameTime(visible: false, minutosJogo: "0:30'", segundosJogo: "22''",),
+                      ],
                     ),
                   ),
                 ],
