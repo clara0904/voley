@@ -5,7 +5,7 @@ import 'package:voley_app/components/game_time.dart';
 import 'package:voley_app/components/components_second/secondary_button.dart';
 import 'package:voley_app/components/components_second/side_column.dart';
 import 'package:voley_app/components/times.dart';
-import 'package:voley_app/models/verifica_vitoria.dart';
+import 'package:voley_app/models/check_victory.dart';
 import 'package:voley_app/screens/third_screen.dart';
 import 'package:voley_app/theme/colors.dart';
 
@@ -83,7 +83,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     _scoreLeft++;
                     _visibleRight = false;
                     _visibleLeft = true;
-                    Vitoria().verificaVitoria(timeA, _scoreLeft, _scoreRigth, novoSet, context);
+                    CheckVictory().verificaVitoria(timeA, _scoreLeft, _scoreRigth, novoSet, context);
                   });
               }),
             ),
@@ -142,7 +142,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     _scoreRigth++;
                     _visibleLeft = false;
                     _visibleRight = true;
-                    Vitoria().verificaVitoria(timeB, _scoreLeft, _scoreRigth, novoSet, context);
+                    CheckVictory().verificaVitoria(timeB, _scoreLeft, _scoreRigth, novoSet, context);
                   });
                 }
               ),
