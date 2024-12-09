@@ -2,7 +2,7 @@
 
 class ColorsApp {
   static Color backgroundPrincipal = const Color(0xff00ADC3);
-  static Color fontePrimaria = const Color.fromARGB(200, 245, 245, 245);
+  static Color fontePrimaria = const Color.fromARGB(215, 245, 245, 245);
   static Color fonteSecundaria = const Color(0xff2B4A8E);
   static Color fonteTerciaria = const Color.fromARGB(255, 255, 226, 6);
   static Color quadras = const Color(0xffF77859);
