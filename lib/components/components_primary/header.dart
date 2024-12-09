@@ -28,7 +28,7 @@ class Header extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  bottom: 3,
+                  bottom: 2,
                   left: 6,
                   child: Text(
                     'do fim de semana',
