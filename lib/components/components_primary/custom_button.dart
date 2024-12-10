@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
           minimumSize: const Size(250, 60),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(12),
             side: comBorder
               ? BorderSide(
                   color: ColorsApp.fontePrimaria,
