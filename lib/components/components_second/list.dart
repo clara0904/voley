@@ -23,17 +23,20 @@ class List extends StatelessWidget {
         children: [
           if (esquerda) ...[
             botao,
-            const SizedBox(width: 15), 
+            const SizedBox(width: 10), 
           ],
-          Text(
-              tipoLance,
-              style: TextStyle(
-                fontSize: 35,
-                color: ColorsApp.fontePrimaria,
+          Expanded(
+            child: Text(
+                tipoLance,
+                style: TextStyle(
+                  fontSize: 32,
+                  color: ColorsApp.fontePrimaria,
+                ),
+                overflow: TextOverflow.ellipsis,
               ),
-            ),
+          ),
             if (!esquerda) ...[
-            const SizedBox(width: 15), 
+            const SizedBox(width: 10), 
             botao,
           ],
         ],
