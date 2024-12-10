@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:voley_app/components/components_primary/custom_button.dart';
 import 'package:voley_app/components/components_primary/header.dart';
 import 'package:voley_app/components/components_primary/times_list.dart';
@@ -11,6 +12,9 @@ class PrimaryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
 
     return SafeArea(
       child: Scaffold(
